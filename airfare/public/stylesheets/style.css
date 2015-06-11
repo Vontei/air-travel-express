@@ -1,0 +1,70 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+div h1 {
+
+  font-size: 50px;
+}
+
+
+
+
+form {
+
+  border-style: outset;
+  max-width: 30em;
+
+}
+
+
+
+
+
+
+
+div {
+  padding-bottom: 10px;
+}
+
+
+
+div label{
+  font-size: 20px;
+
+}
+
+#checkbags {
+  width: 75px;
+  height: 30px;
+  font-size: 20px;
+  text-align: center;
+}
+
+
+#wifiBox label{
+  font-size: 20px;
+}
+
+
+
+button {
+  height: 30px;
+  width: 200px;
+  border-style: line;
+  background-color: transparent;
+  font-size: 13px;
+
+
+}
+
+
+p{
+  font-size: 30px;
+}

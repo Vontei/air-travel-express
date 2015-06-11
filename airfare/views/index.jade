@@ -1,0 +1,67 @@
+extends layout
+
+block content
+
+
+  div
+    h1 Airfare Calculator
+    p Welcome to the #{title} Line
+
+  br 
+
+  form(action="/" method="get")
+    div
+      label Departure City
+      select(id="departure")
+        option(value='CHI') CHI
+        option(value='LA') LA
+        option(value='NY') NY
+        
+    br
+
+
+    div
+      label Arrival City
+      select(id="arrival" name="arrivals")
+        option(value='CHI') CHI
+        option(value="LA") LA
+        option(value="NU") NY
+    br
+    
+
+    div
+      label How many bags would you like to check?
+      input(type="number" id="checkbags" name='bags_checked')
+
+    br
+
+    div
+      label Would you like to upgrade your class?
+        select(id='class' name='class')
+          option(value='0') Coach
+          option(value='200') Business
+          option(value='500') First
+
+    br
+    
+    
+    div
+      label Would you like to add Onboard Wifi? (+$12)
+        input(type='checkbox' id='wifi' name='wifi' value='12')
+        
+    br
+      
+    div 
+      label Discount Code 
+      input(type='text' id='discount' name='discount_code')
+      
+    br  
+      
+    div 
+      button(type="submit" name='calculate' id='button') Calculate Price
+      
+    br
+    
+    div
+      p Your Airfare Price is:
+      span(id='answer') #{AirfareTotal}
