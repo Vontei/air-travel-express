@@ -9,19 +9,17 @@ router.get('/', function(req, res, next) {
 
 
 router.post('/', function(req, res, next) {
-  var button = req.body.button;
   var departure =req.body.departure;
-  var arrival= req.body.arrival;
-  var total = req.body.answer;
-  var airPrice = 0;
-  var bags = req.body.checkbags;
+  var arrival= req.body.arrivals;
+  var bags = req.body.bags_checked;
   var wifi = req.body.wifi;
-  var addWifi = parseInt(wifi);
-  var pickClass = req.body.class;
-  var classChoice = parseInt(pickClass);
-  var discountCode = req.body.discount;
-  res.render('index', calculate.airfareTotal(departure));
+  var pickClass = req.body.classChoice;
+  var discountCode = req.body.discount_code;
+  var answer = calculate.airfareTotal(departure,arrival, bags, wifi, pickClass, discountCode)
+  res.render('index', {airfareTotal: answer})
+
 });
+
 
 
 
